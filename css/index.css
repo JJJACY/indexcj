@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.swiper-container{
+  width: 640px;
+  margin: 0 auto;
+}
+.swiper-wrapper{
+	position:relative;
+	height:500px;
+	overflow:hidden;
+}
+.swiper-slide{
+	display: flex;
+	width: 640px;
+	height:500px;
+}
+.swiper-button-prev{
+	position:absolute;
+	top:220px;
+	width: 30px;
+	height: 60px;
+	background: #DCDCDC;
+	text-align: center;
+	line-height: 60px;
+	font-size: 30px;
+}
+.swiper-button-next{
+	position:absolute;
+	top:220px;
+	left:610px;
+	width: 30px;
+	height: 60px;
+	background: #DCDCDC;
+	text-align: center;
+	line-height: 60px;
+	font-size: 30px;
+}

@@ -41,10 +41,6 @@ class Swipper{
     swiperSlide.setAttribute('id','swiper-slide')
     swiperBtnprev.setAttribute('class','swiper-button-prev');
     swiperBtnnext.setAttribute('class','swiper-button-next');
-    swiperWrapper.setAttribute('style','position:relative;height:500px;overflow:hidden;');
-    swiperSlide.setAttribute('style','display: flex;width: 640px;height:500px;');
-    swiperBtnprev.setAttribute('style','position:absolute;top:220px;width: 30px;height: 60px;background: #DCDCDC;text-align: center;line-height: 60px;font-size: 30px;');
-    swiperBtnnext.setAttribute('style','position:absolute;top:220px;left:610px;width: 30px;height: 60px;background: #DCDCDC;text-align: center;line-height: 60px;font-size: 30px;');
     this._setContent(swiperBtnprev,'<');
     this._setContent(swiperBtnnext,'>');
     this._appendChild(swiperWrapper,swiperSlide);
@@ -53,18 +49,7 @@ class Swipper{
     this._appendChild(idContainer,swiperWrapper);
     swiperBtnprev.addEventListener('click',this.swiperprev.bind(this));
     swiperBtnnext.addEventListener('click',this.swipernext.bind(this));
-    //window.addEventListener('resize',this.swiperReset.bind(this));
   }
-  // swiperReset(e) {
-  //   let swiperslide = document.getElementById('swiper-slide');
-  //   console.log(swiperslide.offsetWidth)
-  //   let swiperItemWidth = swiperslide.offsetWidth;
-  //   let index = this.state.index;
-  //   let translateX = - (swiperItemWidth + swiperItemWidth * index);
-  //   this.state.itemWidth = swiperItemWidth;
-  //   this.state.translateX = translateX;
-  //   swiperslide.style.transform = `translateX(${translateX}px)`;
-  // }
   _clone(){
     let swiperImg = document.getElementsByClassName('swiper-img');
     let firstImg = swiperImg[0].cloneNode();
@@ -141,7 +126,6 @@ class Swipper{
 const PAGE = {
   data: {
     classname: null,
-    consize: null
   },
   init:function(){
     this.initSwipper();
